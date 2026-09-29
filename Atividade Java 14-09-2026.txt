@@ -1,0 +1,158 @@
+Atividade 1 ---------------------------------------------------------------------
+import java.util.Scanner;
+
+public class Atividade_1 {
+    public static void main(String[] args) {
+        Scanner Ler = new Scanner(System.in);
+
+        int cibele = 0;
+        int camila = 0;
+        int celeste = 0;
+
+        System.out.print("Digite a idade de Cibele: ");
+        cibele = Ler.nextInt();
+        System.out.print("Digite a idade de Camila: ");
+        camila = Ler.nextInt();
+        System.out.print("Digite a idade de Celeste: ");
+        celeste = Ler.nextInt();
+
+        if (cibele <= camila && camila <= celeste) {
+            System.out.println(camila);
+        } 
+        else if (cibele <= celeste && celeste <= camila) {
+            System.out.println(celeste);
+        } 
+        else if (camila <= cibele && cibele <= celeste) {
+            System.out.println(cibele);
+        } 
+        else if (celeste <= cibele && cibele <= camila) {
+            System.out.println(cibele);
+        } 
+        else if (camila <= celeste && celeste <= cibele) {
+            System.out.println(celeste);
+        } 
+        else {
+            System.out.println(camila);
+        }
+    }
+}
+
+Atividade 2 ---------------------------------------------------------------------
+import java.util.Scanner;
+
+public class Atividade_2 {
+    public static void main(String[] args) {
+
+        Scanner Ler = new Scanner(System.in);
+
+        int V = 0;
+
+        System.out.println("Digite os resultados dos 6 jogos:");
+
+        for (int i = 0; i < 6; i++) {
+            String resultado = Ler.next();
+
+            if (resultado.equals("V") || resultado.equals("v")) {
+                V++;
+            }
+        }
+
+        if (V >= 5) {
+            System.out.println(1);
+        } else if (V >= 3) {
+            System.out.println(2);
+        } else if (V >= 1) {
+            System.out.println(1);
+        } else {
+            System.out.println(-1);
+        }
+    }
+}
+
+Atividade 3 ---------------------------------------------------------------------
+import java.util.Scanner;
+
+public class Atividade_3 {
+    public static void main(String[] args) {
+
+        Scanner Ler = new Scanner(System.in);
+
+        System.out.println("Digite o valor de S:");
+        int S = Ler.nextInt();
+
+        System.out.println("Digite o valor de A:");
+        int A = Ler.nextInt();
+
+        System.out.println("Digite o valor de B:");
+        int B = Ler.nextInt();
+
+        int quantidade = 0;
+
+        for (int i = A; i <= B; i++) {
+
+            int numero = i;
+            int soma = 0;
+
+            while (numero > 0) {
+                soma = soma + numero % 10;
+                numero = numero / 10;
+            }
+
+            if (soma == S) {
+                quantidade++;
+            }
+        }
+
+        System.out.println("Quantidade de números:");
+        System.out.println(quantidade);
+    }
+}
+
+Atividade 4 ---------------------------------------------------------------------
+import java.util.Scanner;
+
+public class Atividade_4 {
+    public static void main(String[] args) {
+
+        Scanner Ler = new Scanner(System.in);
+
+        System.out.println("Digite o valor de N:");
+        int N = Ler.nextInt();
+
+        int pecas = (N + 1) * (N + 2) / 2;
+
+        System.out.println("Quantidade de peças:");
+        System.out.println(pecas);
+    }
+}
+
+Atividade 5 ---------------------------------------------------------------------
+import java.util.Scanner;
+
+public class Atividade_5 {
+    public static void main(String[] args) {
+
+        Scanner Ler = new Scanner(System.in);
+
+        System.out.println("Digite o número, distância e velocidade da primeira charrete:");
+        int N1 = Ler.nextInt();
+        int D1 = Ler.nextInt();
+        int V1 = Ler.nextInt();
+
+        System.out.println("Digite o número, distância e velocidade da segunda charrete:");
+        int N2 = Ler.nextInt();
+        int D2 = Ler.nextInt();
+        int V2 = Ler.nextInt();
+
+        double tempo1 = (double) D1 / V1;
+        double tempo2 = (double) D2 / V2;
+
+        if (tempo1 < tempo2) {
+            System.out.println("A charrete vencedora é:");
+            System.out.println(N1);
+        } else {
+            System.out.println("A charrete vencedora é:");
+            System.out.println(N2);
+        }
+    }
+}
